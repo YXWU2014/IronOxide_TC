@@ -1,4 +1,4 @@
-# %% Thermocalc calculation
+# %% ===== Thermocalc calculation =====
 
 from tc_python import *
 import matplotlib.pyplot as plt
@@ -64,7 +64,7 @@ with Pool() as pool:
 
 # print(len(all_results[0]))
 
-# %% Unpack the calculation results and save into excel
+# %% ===== Unpack the calculation results and save into excel =====
 
 # Merge results from different processes
 list_of_conditions = [res[0] for res in all_results]
@@ -87,8 +87,6 @@ list_np_LIQUID = [item for sublist in list_np_LIQUID for item in sublist]
 
 print(len(list_of_conditions))
 
-
-# # ====== postprocessing of tc calculation ======
 # list_np_FCC_L12_merge = [max(a, b, c) for a, b, c in zip(
 #     list_np_FCC_L12, list_np_FCC_L12_1, list_np_FCC_L12_2)]
 
@@ -110,7 +108,7 @@ df.to_excel(os.path.join(current_directory,
             "tc_full_df_check.xlsx"), index=False)
 
 
-# %% Choose one temperature to check before mapping
+# %% ===== Choose one temperature to check before mapping =====
 
 # Filter the dataframe for rows where T is 373.15
 filtered_df = df[df['T'] == 473.15]
@@ -130,7 +128,7 @@ plt.grid(True)
 # plt.xlim(-100, -25)
 
 
-# %% check mapping for one phase
+# %% ===== check mapping for one phase =====
 
 plt.figure(figsize=(6, 6))
 plt.scatter(df['lnacr_o'], df['T'], c=df['np(HEMATITE)'], s=50,  alpha=0.6)
@@ -140,7 +138,7 @@ plt.legend()
 plt.grid(True)
 plt.show()
 
-# %% Organise all phases into the same plot
+# %% ===== Organise all phases into the same plot =====
 
 # Splitting the main dataframe into individual dataframes and filtering them
 df_HEMATITE = df[['lnacr_o', 'T', 'np(HEMATITE)']]
@@ -183,8 +181,6 @@ plt.scatter(df_BCC_A2['lnacr_o'], df_BCC_A2['T'],
 plt.scatter(df_LIQUID['lnacr_o'], df_LIQUID['T'],
             label='LIQUID', color=colors['LIQUID'], alpha=0.5)
 
-
-# Enhancing the axis labels and title
 plt.xlabel('LN O activtity', fontsize=14)
 plt.ylabel('T', fontsize=14)
 plt.title('full equilibrium', fontsize=14)
