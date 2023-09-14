@@ -1,0 +1,54 @@
+{
+  "freezeinequilibriumpythonmodel": {
+    "category": [
+      "General Models"
+    ],
+    "name": "Simplified equilibrium with freeze-in temperature",
+    "description": "\nCalculates equilibrium at the freeze-in temperature and evaluate the properties at a different temperature. The assumption is that diffusion and phase transformations are negligible when changing from the freeze-in-temperature and, therefore, that the phase amounts and compositions of phases are kept at all other temperatures.\n\nInput parameters:\n- Freeze-in temperature: The temperature where the equilibrium is calculated.\n\nThe model evaluates the following properties for the system:\n- Electric resistivity (ohm m)\n- Electric conductivity (S/m)\n- Thermal conductivity (W/(mK))\n- Thermal resistivity (mK/W)\n- Thermal diffusivity (m2/s)\n- Heat capacity (J/(mol K))\n- Density (g/cm3)\n- Linear thermal expansion (1/K)\n",
+    "modelId": "FreezeInEquilibriumPythonModel",
+    "licenseKey": "",
+    "path": "PropertyModels/FreezeInEquilibriumPythonModel",
+    "timestamp": 1684769337001,
+    "timestampStr": "Mon May 22 17:28:57 CEST 2023",
+    "hash": "3CEB5D6A6BCA1B29164C49E2131D8433-FreezeInEquilibriumPythonModel.py.encrypted"
+  },
+  "simplified equilibrium with freeze-in temperature": {
+    "category": [
+      "General Models"
+    ],
+    "name": "Simplified equilibrium with freeze-in temperature",
+    "description": "\nCalculates equilibrium at the freeze-in temperature and evaluate the properties at a different temperature. The assumption is that diffusion and phase transformations are negligible when changing from the freeze-in-temperature and, therefore, that the phase amounts and compositions of phases are kept at all other temperatures.\n\nInput parameters:\n- Freeze-in temperature: The temperature where the equilibrium is calculated.\n\nThe model evaluates the following properties for the system:\n- Electric resistivity (ohm m)\n- Electric conductivity (S/m)\n- Thermal conductivity (W/(mK))\n- Thermal resistivity (mK/W)\n- Thermal diffusivity (m2/s)\n- Heat capacity (J/(mol K))\n- Density (g/cm3)\n- Linear thermal expansion (1/K)\n",
+    "modelId": "FreezeInEquilibriumPythonModel",
+    "licenseKey": "",
+    "path": "PropertyModels/FreezeInEquilibriumPythonModel",
+    "timestamp": 1684769337001,
+    "timestampStr": "Mon May 22 17:28:57 CEST 2023",
+    "hash": "3CEB5D6A6BCA1B29164C49E2131D8433-FreezeInEquilibriumPythonModel.py.encrypted"
+  },
+  "simple linear model": {
+    "category": [
+      "Examples"
+    ],
+    "name": "Simple linear model",
+    "description": "This is an parameterized simple linear model.",
+    "modelId": "LinearInTPythonModel",
+    "licenseKey": "",
+    "path": "PropertyModels/LinearInTPythonModel",
+    "timestamp": 1684769323307,
+    "timestampStr": "Mon May 22 17:28:43 CEST 2023",
+    "hash": "2DD5295E4C9C92CB4CBA17DF215F6BA7-LinearInTPythonModel.py.encrypted"
+  },
+  "linearintpythonmodel": {
+    "category": [
+      "Examples"
+    ],
+    "name": "Simple linear model",
+    "description": "This is an parameterized simple linear model.",
+    "modelId": "LinearInTPythonModel",
+    "licenseKey": "",
+    "path": "PropertyModels/LinearInTPythonModel",
+    "timestamp": 1684769323307,
+    "timestampStr": "Mon May 22 17:28:43 CEST 2023",
+    "hash": "2DD5295E4C9C92CB4CBA17DF215F6BA7-LinearInTPythonModel.py.encrypted"
+  }
+}
