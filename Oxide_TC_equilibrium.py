@@ -37,7 +37,7 @@ def tc_calculation(tk):
         )
 
         # Generate condition combinations for equilibrium calculations
-        k = 500
+        k = 250
         list_of_conditions = [(("lnacr(o)", lnacr_o), ("T", tk))
                               for lnacr_o in np.linspace(-80, -5, k)]
 
@@ -57,7 +57,7 @@ def tc_calculation(tk):
 
 
 # Parallelize the computation over different tk values
-tk_values = np.arange(100+273.15, 1400+273.15, 50)
+tk_values = np.arange(100+273.15, 1400+273.15, 10)
 print("temperature range: ", tk_values)
 with Pool() as pool:
     all_results = pool.map(tc_calculation, tk_values)
@@ -131,10 +131,9 @@ plt.grid(True)
 # %% ===== check mapping for one phase =====
 
 plt.figure(figsize=(6, 6))
-plt.scatter(df['lnacr_o'], df['T'], c=df['np(HEMATITE)'], s=50,  alpha=0.6)
+plt.scatter(df['lnacr_o'], df['T'], c=df['np(HEMATITE)'], s=5,  alpha=0.6)
 plt.xlabel(df.columns[0])
 plt.ylabel(df.columns[1])
-plt.legend()
 plt.grid(True)
 plt.show()
 
@@ -166,19 +165,19 @@ colors = {
     'LIQUID': '#a65628'
 }
 
-plt.scatter(df_HEMATITE['lnacr_o'], df_HEMATITE['T'],
+plt.scatter(df_HEMATITE['lnacr_o'], df_HEMATITE['T'], s=10,
             label='HEMATITE', color=colors['HEMATITE'], alpha=0.5)
 
-plt.scatter(df_MAGNETITE['lnacr_o'], df_MAGNETITE['T'],
+plt.scatter(df_MAGNETITE['lnacr_o'], df_MAGNETITE['T'], s=10,
             label='MAGNETITE', color=colors['MAGNETITE'], alpha=0.5)
 
-plt.scatter(df_WUSTITE['lnacr_o'], df_WUSTITE['T'],
+plt.scatter(df_WUSTITE['lnacr_o'], df_WUSTITE['T'], s=10,
             label='WUSTITE', color=colors['WUSTITE'], alpha=0.5)
 
-plt.scatter(df_BCC_A2['lnacr_o'], df_BCC_A2['T'],
+plt.scatter(df_BCC_A2['lnacr_o'], df_BCC_A2['T'], s=10,
             label='BCC_A2', color=colors['BCC_A2'], alpha=0.5)
 
-plt.scatter(df_LIQUID['lnacr_o'], df_LIQUID['T'],
+plt.scatter(df_LIQUID['lnacr_o'], df_LIQUID['T'], s=10,
             label='LIQUID', color=colors['LIQUID'], alpha=0.5)
 
 plt.xlabel('LN O activtity', fontsize=14)
