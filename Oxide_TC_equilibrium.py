@@ -57,14 +57,14 @@ def tc_calculation(tk):
 
 
 # Parallelize the computation over different tk values
-tk_values = np.arange(100+273.15, 1600+273.15, 50)
+tk_values = np.arange(100+273.15, 1400+273.15, 50)
 print("temperature range: ", tk_values)
 with Pool() as pool:
     all_results = pool.map(tc_calculation, tk_values)
 
 # print(len(all_results[0]))
 
-# %% Unpack the calculation results
+# %% Unpack the calculation results and save into excel
 
 # Merge results from different processes
 list_of_conditions = [res[0] for res in all_results]
@@ -110,9 +110,7 @@ df.to_excel(os.path.join(current_directory,
             "tc_full_df_check.xlsx"), index=False)
 
 
-# %%  plot
-
-# # Plotting
+# %% Choose one temperature to check before mapping
 
 # Filter the dataframe for rows where T is 373.15
 filtered_df = df[df['T'] == 473.15]
@@ -131,29 +129,73 @@ plt.ylabel('Mole fraction')
 plt.grid(True)
 # plt.xlim(-100, -25)
 
-plt_output_fname = output_fname + ".png"
-plt.savefig(os.path.join(current_directory, plt_output_fname))
 
+# %% check mapping for one phase
 
-# %% ----------------------------------------------------------------
-
-# Extract the first two columns for x and y axes
-x = df.iloc[:, 0]
-y = df.iloc[:, 1]
-
-# Using a color palette to ensure distinct colors for each scatter plot
-
-plt.figure(figsize=(15, 10))
-
-# Iterate over columns and colors simultaneously using zip
-
-plt.scatter(x, y, c=df.iloc[:, 5], s=50,  alpha=0.6)
-
+plt.figure(figsize=(6, 6))
+plt.scatter(df['lnacr_o'], df['T'], c=df['np(HEMATITE)'], s=50,  alpha=0.6)
 plt.xlabel(df.columns[0])
 plt.ylabel(df.columns[1])
 plt.legend()
-plt.title("Scatter Plot of Columns against First Two Columns with Distinct Colors")
 plt.grid(True)
+plt.show()
+
+# %% Organise all phases into the same plot
+
+# Splitting the main dataframe into individual dataframes and filtering them
+df_HEMATITE = df[['lnacr_o', 'T', 'np(HEMATITE)']]
+df_HEMATITE = df_HEMATITE[df_HEMATITE['np(HEMATITE)'] >= 0.001]
+
+df_MAGNETITE = df[['lnacr_o', 'T', 'np(MAGNETITE)']]
+df_MAGNETITE = df_MAGNETITE[df_MAGNETITE['np(MAGNETITE)'] >= 0.001]
+
+df_WUSTITE = df[['lnacr_o', 'T', 'np(WUSTITE)']]
+df_WUSTITE = df_WUSTITE[df_WUSTITE['np(WUSTITE)'] >= 0.001]
+
+df_BCC_A2 = df[['lnacr_o', 'T', 'np(BCC_A2)']]
+df_BCC_A2 = df_BCC_A2[df_BCC_A2['np(BCC_A2)'] >= 0.001]
+
+df_LIQUID = df[['lnacr_o', 'T', 'np(LIQUID)']]
+df_LIQUID = df_LIQUID[df_LIQUID['np(LIQUID)'] >= 0.001]
+
+# Plotting the individual dataframes
+plt.figure(figsize=(5, 5))
+colors = {
+    'HEMATITE': '#377eb8',
+    'MAGNETITE': '#ff7f00',
+    'WUSTITE': '#4daf4a',
+    'BCC_A2': '#f781bf',
+    'LIQUID': '#a65628'
+}
+
+plt.scatter(df_HEMATITE['lnacr_o'], df_HEMATITE['T'],
+            label='HEMATITE', color=colors['HEMATITE'], alpha=0.5)
+
+plt.scatter(df_MAGNETITE['lnacr_o'], df_MAGNETITE['T'],
+            label='MAGNETITE', color=colors['MAGNETITE'], alpha=0.5)
+
+plt.scatter(df_WUSTITE['lnacr_o'], df_WUSTITE['T'],
+            label='WUSTITE', color=colors['WUSTITE'], alpha=0.5)
+
+plt.scatter(df_BCC_A2['lnacr_o'], df_BCC_A2['T'],
+            label='BCC_A2', color=colors['BCC_A2'], alpha=0.5)
+
+plt.scatter(df_LIQUID['lnacr_o'], df_LIQUID['T'],
+            label='LIQUID', color=colors['LIQUID'], alpha=0.5)
+
+
+# Enhancing the axis labels and title
+plt.xlabel('LN O activtity', fontsize=14)
+plt.ylabel('T', fontsize=14)
+plt.title('full equilibrium', fontsize=14)
+plt.legend(fontsize=12, loc='upper left')
+plt.grid(True, which='both', linestyle='--', linewidth=0.5)
+plt.grid(True)
+plt.tight_layout()
+
+plt_output_fname = output_fname + ".png"
+plt.savefig(os.path.join(current_directory, plt_output_fname))
+
 plt.show()
 
 # %%
