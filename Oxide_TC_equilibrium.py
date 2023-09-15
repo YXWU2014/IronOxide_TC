@@ -4,6 +4,7 @@ from tc_python import *
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+import time
 from multiprocessing import Pool
 
 current_directory = os.path.dirname(os.path.abspath(__file__))
@@ -57,10 +58,15 @@ def tc_calculation(tk):
 
 
 # Parallelize the computation over different tk values
+start_time = time.time()
+
 tk_values = np.arange(100+273.15, 1400+273.15, 10)
 print("temperature range: ", tk_values)
-with Pool() as pool:
+with Pool(processes=16) as pool:
     all_results = pool.map(tc_calculation, tk_values)
+
+elapsed_time = time.time() - start_time
+print("Time taken: ", int(elapsed_time), "seconds")
 
 # print(len(all_results[0]))
 
@@ -74,7 +80,7 @@ list_np_WUSTITE = [res[3] for res in all_results]
 list_np_BCC_A2 = [res[4] for res in all_results]
 list_np_LIQUID = [res[5] for res in all_results]
 
-print(len(list_of_conditions))
+# print(len(list_of_conditions))
 
 # Flattening the lists
 list_of_conditions = [
@@ -85,7 +91,7 @@ list_np_WUSTITE = [item for sublist in list_np_WUSTITE for item in sublist]
 list_np_BCC_A2 = [item for sublist in list_np_BCC_A2 for item in sublist]
 list_np_LIQUID = [item for sublist in list_np_LIQUID for item in sublist]
 
-print(len(list_of_conditions))
+# print(len(list_of_conditions))
 
 # list_np_FCC_L12_merge = [max(a, b, c) for a, b, c in zip(
 #     list_np_FCC_L12, list_np_FCC_L12_1, list_np_FCC_L12_2)]
@@ -181,7 +187,7 @@ plt.scatter(df_LIQUID['lnacr_o'], df_LIQUID['T'], s=10,
             label='LIQUID', color=colors['LIQUID'], alpha=0.5)
 
 plt.xlabel('LN O activtity', fontsize=14)
-plt.ylabel('T', fontsize=14)
+plt.ylabel('T (K)', fontsize=14)
 plt.title('full equilibrium', fontsize=14)
 plt.legend(fontsize=12, loc='upper left')
 plt.grid(True, which='both', linestyle='--', linewidth=0.5)
