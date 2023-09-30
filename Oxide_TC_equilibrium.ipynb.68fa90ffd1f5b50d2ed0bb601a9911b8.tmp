@@ -1,0 +1,10 @@
+df_DGM = pd.DataFrame({
+    'lnacr_o':  DGM_conditions['lnacr(o)'],
+    'T': DGM_conditions['T'],
+    **{f'gm({phase})': DGM_gm_values.get(phase, []) for phase in DGM_phase_list}
+})
+
+df_DGM.to_excel(os.path.join(current_directory,
+                             "tc_df_DGM_check.xlsx"), index=False)
+
+display(df_DGM.head(3), df_Gmin.shape)

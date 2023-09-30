@@ -26,8 +26,8 @@ see `Oxide_TC_equilibrium.ipynb`
 
 #### Driving force of phases (against gas) as a function of temperature and O activity
 
-![Oxide_TC_Gm_phases](Oxide_TC_Gm_phases.png)
+![Oxide_TC_dgm_phases](Oxide_TC_dgm_phases.png)
 
 #### minimum Driving force diagram
 
-<img src="Oxide_TC_Gmin.png" width="300"/>
+<img src="Oxide_TC_DGMmin.png" width="300"/>

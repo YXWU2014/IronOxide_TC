@@ -1,0 +1,49 @@
+from copy import deepcopy
+
+
+def process_data(DGM_args, DGM_results):
+
+    DGM_gm_values = {}
+    DGM_phase_conditions = {}
+
+    for args, result in zip(DGM_args, DGM_results):
+        tk, db, phase = deepcopy(args)
+        conditions, gm_values = deepcopy(result)
+
+        lnacr_o_values = [dict(cond)['lnacr(o)'] for cond in conditions]
+        T_values = [dict(cond)['T'] for cond in conditions]
+
+        if phase in DGM_gm_values:
+            DGM_gm_values[phase].extend(gm_values)
+        else:
+            DGM_gm_values[phase] = gm_values
+
+        if phase in DGM_phase_conditions:
+            DGM_phase_conditions[phase]['lnacr(o)'].extend(lnacr_o_values)
+            DGM_phase_conditions[phase]['T'].extend(T_values)
+        else:
+            DGM_phase_conditions[phase] = {
+                'lnacr(o)': lnacr_o_values, 'T': T_values}
+
+    return DGM_gm_values, DGM_phase_conditions
+
+
+DGM_phase_list = [phase for db_phases in databases_phases.values()
+                  for phase in db_phases]
+print(DGM_phase_list)
+
+print("Length of DGM_args:", len(Gmin_args))
+print("Length of DGM_results:", len(DGM_results))
+
+DGM_gm_values, DGM_phase_conditions = process_data(
+    Gmin_args, DGM_results)
+
+print("temperature_grid x acc_grid:", 130*250)
+print("length of DGM_gm_values: ", len(DGM_gm_values['BCC_A2']))
+
+for i, phase in enumerate(DGM_phase_list):
+    assert DGM_phase_conditions[DGM_phase_list[0]
+                                ] == DGM_phase_conditions[phase]
+
+DGM_conditions = DGM_phase_conditions[DGM_phase_list[0]]
+print("length of DGM_conditions: ", len(DGM_conditions['lnacr(o)']))
