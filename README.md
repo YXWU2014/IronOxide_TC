@@ -14,15 +14,15 @@ see `Oxide_TC_equilibrium.ipynb`
 
 #### Full Equilibrium phase diagram as a function of temperature and O activity
 
-  <img src="Oxide_TC_FullEquil.png" width="300"/>
+<img src="Oxide_TC_FullEquil.png" width="300"/>
   
 #### Gibbs energy of phases as a function of temperature and O activity
 
 ![Oxide_TC_Gm_phases](Oxide_TC_Gm_phases.png)
 
-#### minimum Gibbs energy diagram
+<!-- #### minimum Gibbs energy diagram
 
-<img src="Oxide_TC_Gmin.png" width="300"/>
+<img src="Oxide_TC_Gmin.png" width="300"/> -->
 
 #### Driving force of phases (against gas) as a function of temperature and O activity
 
