@@ -23,3 +23,11 @@ see `Oxide_TC_equilibrium.ipynb`
 #### minimum Gibbs energy diagram
 
 <img src="Oxide_TC_Gmin.png" width="300"/>
+
+#### Driving force of phases (against gas) as a function of temperature and O activity
+
+![Oxide_TC_Gm_phases](Oxide_TC_Gm_phases.png)
+
+#### minimum Driving force diagram
+
+<img src="Oxide_TC_Gmin.png" width="300"/>
