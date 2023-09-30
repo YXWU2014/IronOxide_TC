@@ -28,6 +28,6 @@ see `Oxide_TC_equilibrium.ipynb`
 
 ![Oxide_TC_dgm_phases](Oxide_TC_dgm_phases.png)
 
-#### minimum Driving force diagram
+#### Maximum Driving force diagram
 
-<img src="Oxide_TC_DGMmin.png" width="300"/>
+<img src="Oxide_TC_DGMmax.png" width="300"/>
