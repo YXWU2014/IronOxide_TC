@@ -10,7 +10,10 @@ just implemented to map the full equilibrium regimes as a function of temperatur
 
 see `Oxide_TC_equilibrium.ipynb`
 
-<img src="Oxide_TC_FullEquil.png" width="400"/>
-![Oxide_TC_FullEquil](Oxide_TC_FullEquil.png)
+## Visuals
 
+- Full Equilibrium phase diagram as a function of temperature and O activity
+<img src="Oxide_TC_FullEquil.png" width="300"/>
+
+- Gibbs energy of phases as a function of temperature and O activity
 ![Oxide_TC_Gm_phases](Oxide_TC_Gm_phases.png)
