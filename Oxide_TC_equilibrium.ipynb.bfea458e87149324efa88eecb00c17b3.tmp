@@ -1,0 +1,32 @@
+# Plotting the individual dataframes
+plt.figure(figsize=(5, 5))
+
+plt.scatter(df_FullEquil_HEMATITE['lnacr_o'], df_FullEquil_HEMATITE['T'], s=10,
+            label='HEMATITE', color=colors['HEMATITE'], alpha=0.5)
+
+plt.scatter(df_FullEquil_MAGNETITE['lnacr_o'], df_FullEquil_MAGNETITE['T'], s=10,
+            label='MAGNETITE', color=colors['MAGNETITE'], alpha=0.5)
+
+plt.scatter(df_FullEquil_WUSTITE['lnacr_o'], df_FullEquil_WUSTITE['T'], s=10,
+            label='WUSTITE', color=colors['WUSTITE'], alpha=0.5)
+
+plt.scatter(df_FullEquil_BCC_A2['lnacr_o'], df_FullEquil_BCC_A2['T'], s=10,
+            label='BCC_A2', color=colors['BCC_A2'], alpha=0.5)
+
+plt.scatter(df_FullEquil_LIQUID['lnacr_o'], df_FullEquil_LIQUID['T'], s=10,
+            label='LIQUID', color=colors['LIQUID'], alpha=0.5)
+
+plt.xlabel('LN O activtity', fontsize=14)
+plt.ylabel('T (K)', fontsize=14)
+plt.title('full equilibrium', fontsize=14)
+plt.legend(fontsize=12, loc='upper left')
+plt.grid(True, which='both', linestyle='--', linewidth=0.5)
+plt.xlim([min(df_Gmin['lnacr_o']), max(df_Gmin['lnacr_o'])])
+plt.ylim([min(df_Gmin['T']), max(df_Gmin['T'])])
+plt.tight_layout()
+
+plt_output_fname = "Oxide_TC_FullEquil.png"
+plt.savefig(os.path.join(current_directory, plt_output_fname),
+            format='png', dpi=300, bbox_inches='tight', )
+
+plt.show()

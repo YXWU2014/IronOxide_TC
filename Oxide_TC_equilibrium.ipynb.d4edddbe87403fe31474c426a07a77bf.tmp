@@ -1,0 +1,1 @@
+display(df_Gmin.head(3), df_Gmin.shape)
