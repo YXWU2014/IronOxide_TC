@@ -3,12 +3,18 @@
 just implemented to map the full equilibrium regimes as a function of temperature and O activity
 
 - Pressure = 0.5Pa (5e-6 bar) and only Fe and O
-- used the BCC and Liquid phase from the TCFE11 database
-- used HEMATITE, MAGNETITE and WUSTITE phase from the SSUB5 database
 - plotting as T(K) and ln(Oxygen activity): referenced to the Oxygen gas at each temperature
 - (we can update the choice of databse later)
 
-see `Oxide_TC_equilibrium.ipynb`
+## Notebook
+
+- see `Oxide_TC_calculation.ipynb` for full calculation and visualisations.
+
+## Dependencies
+
+- **tc-python and Thermo-Calc**
+- **TCFE**: using the TCFE11 database for the BCC and Liquid phases.
+- **SSUB**: Using the SSUB5 database for the HEMATITE, MAGNETITE, and WUSTITE phases.
 
 ## Visuals
 
