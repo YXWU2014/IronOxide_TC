@@ -1,0 +1,12 @@
+{
+  "ssub5": [
+    " FE1\u003cG\u003e THERMODATA \u0026FE1\u003cG\u003e Fe\u003cG\u003e \u0026Data provided by T.C.R.A.S. October 1996 \u0026Modified by Thermodata - new assessment",
+    " FE1O1\u003cG\u003e TCRAS 5-F FEO IRON OXIDE 23/11/06 \u0026FE1O1\u003cG\u003e FeO\u003cG\u003e",
+    " FE1O2\u003cG\u003e T.C.R.A.S Class: 6 \u0026FE1O2\u003cG\u003e FeO2\u003cG\u003e \u0026Data provided by TCRAS. October 1996. Error in version 1997. \u0026S298 corrected to 1bar \u002620080222 AAZ TCRAS2006 : dH, S",
+    " FE2\u003cG\u003e THERMODATA \u0026FE2\u003cG\u003e Fe2\u003cG\u003e \u0026Data provided by T.C.R.A.S. October 1996 \u0026Modified by Thermodata - new assessment. \u0026Typing error corrected 12/06",
+    " O1\u003cG\u003e TCRAS 02/06/80 \u0026O1\u003cG\u003e O\u003cG\u003e",
+    " O2\u003cG\u003e TCRAS 21/06/90 \u0026O2\u003cG\u003e \u0026OXYGEN Gaseous Standard State.",
+    " O3\u003cG\u003e TCRAS 02/06/80 \u0026O3\u003cG\u003e \u0026OZONE Gaseous Standard State.",
+    " FE3O4\u003cMAGNETITE\u003e JANAF 4th Ed. \u0026FE3O4 Fe3O4 MAGNETITE \u0026Data refitted by IA to reproduce the magnetic transition."
+  ]
+}

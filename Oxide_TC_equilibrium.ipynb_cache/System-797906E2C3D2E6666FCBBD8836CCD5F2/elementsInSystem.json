@@ -1,0 +1,20 @@
+[
+  {
+    "elementName": "O",
+    "isInterstitial": false,
+    "molarMass": 15.999,
+    "stableElementReference": "1/2_MOLE_O2(GAS)",
+    "enthalpy": 4341.0,
+    "entropyDiff0To298K": 102.52,
+    "isValid": true
+  },
+  {
+    "elementName": "FE",
+    "isInterstitial": false,
+    "molarMass": 55.847,
+    "stableElementReference": "BCC_A2",
+    "enthalpy": 4489.0,
+    "entropyDiff0To298K": 27.28,
+    "isValid": true
+  }
+]

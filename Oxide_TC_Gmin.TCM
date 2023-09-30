@@ -1,0 +1,118 @@
+go da
+sw tcfe11
+d-sys Fe O
+rej ph *
+rest ph bcc_a2 
+get
+
+APPEND SSUB5
+DEF-SYS O Fe
+rej ph *
+rest ph HEMATITE MAGNETITE WUSTITE GAS
+GET
+
+
+@@ -----------------------------------------------------------------
+go p-3
+
+@@ @@ TURN OFF GLOBAL COMPLETELY FOR AQUEOUS CALCULATIONS
+ADV-OPT GLOBAL N N !
+@@ ADV-OPT EQ_CALC N Y !
+@@ SET-NUM-LIM 20000 1E-6 1E-20 Y
+
+s-c t=373.15 p=0.5 n=1
+l-c
+
+s-c lnacr(o)=-400
+s-r-s o gas * 1e5
+c-e
+l-e
+
+VWCS
+show lnacr(o)
+
+
+@@ ----- check the activity dependence of the Gm -----
+CH-ST
+PHASE
+*
+SUS
+
+CH-ST
+PHASE
+WUSTITE
+ENTERED
+1
+
+s-c lnacr(o)=-300
+c-e
+show gm(WUSTITE)
+
+s-c lnacr(o)=-400
+c-e
+show gm(WUSTITE)
+
+s-c lnacr(o)=-500
+c-e
+show gm(WUSTITE)
+
+
+@@ ----- check across the phases -----
+CH-ST
+PHASE
+*
+SUS
+
+CH-ST
+PHASE
+WUSTITE
+ENTERED
+1
+
+c-e
+show gm(WUSTITE)
+
+CH-ST
+PHASE
+*
+SUS
+
+CH-ST
+PHASE
+MAGNETITE
+ENTERED
+1
+
+c-e
+show gm(MAGNETITE)
+
+CH-ST
+PHASE
+*
+SUS
+
+CH-ST
+PHASE
+HEMATITE
+ENTERED
+1
+
+c-e
+show gm(HEMATITE)
+
+CH-ST
+PHASE
+*
+SUS
+
+CH-ST
+PHASE
+BCC_A2
+ENTERED
+1
+
+c-e
+show gm(BCC_A2)
+
+ 
+ 

@@ -1,0 +1,25 @@
+[
+  {
+    "elements": [
+      "Fe",
+      "O"
+    ],
+    "speciesToCreateAndSelect": [],
+    "speciesToAdd": [],
+    "speciesToRemove": [],
+    "phasesToAdd": [
+      "WUSTITE GAS"
+    ],
+    "addedCompositionSets": [],
+    "phasesToRemove": [
+      "*"
+    ],
+    "constituentsToRejectFromSublattice": [],
+    "constituentsToSelectFromSublattice": [],
+    "name": "ssub5",
+    "deSelectDefaultPhases": false,
+    "lastChanged": 0,
+    "isUserDatabase": false,
+    "databaseLoadCommand": "ssub5"
+  }
+]

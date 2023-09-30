@@ -1,0 +1,234 @@
+[
+  {
+    "phaseName": "WUSTITE",
+    "metadata": {
+      "type": "SOLID",
+      "sublattices": [
+        {
+          "constituents": [
+            {
+              "name": "FE0.947O1",
+              "elements": [
+                {
+                  "left": {
+                    "elementName": "FE",
+                    "isInterstitial": false,
+                    "molarMass": 55.847,
+                    "stableElementReference": "BCC_A2",
+                    "enthalpy": 4489.0,
+                    "entropyDiff0To298K": 27.28,
+                    "isValid": true
+                  },
+                  "right": 0.947
+                },
+                {
+                  "left": {
+                    "elementName": "O",
+                    "isInterstitial": false,
+                    "molarMass": 15.999,
+                    "stableElementReference": "1/2_MOLE_O2(GAS)",
+                    "enthalpy": 4341.0,
+                    "entropyDiff0To298K": 102.52,
+                    "isValid": true
+                  },
+                  "right": 1.0
+                }
+              ],
+              "charge": 0,
+              "isInterstitial": false,
+              "isValid": true
+            }
+          ],
+          "nrOfSites": 1.0
+        }
+      ],
+      "hasMolarVolumeData": false,
+      "hasDiffusionData": false,
+      "diluteDiffusionModel": {
+        "type": "se.thermocalc.externalapi.database.NoDiffusion"
+      }
+    }
+  },
+  {
+    "phaseName": "GAS",
+    "metadata": {
+      "type": "GAS",
+      "sublattices": [
+        {
+          "constituents": [
+            {
+              "name": "O3",
+              "elements": [
+                {
+                  "left": {
+                    "elementName": "O",
+                    "isInterstitial": false,
+                    "molarMass": 15.999,
+                    "stableElementReference": "1/2_MOLE_O2(GAS)",
+                    "enthalpy": 4341.0,
+                    "entropyDiff0To298K": 102.52,
+                    "isValid": true
+                  },
+                  "right": 3.0
+                }
+              ],
+              "charge": 0,
+              "isInterstitial": false,
+              "isValid": true
+            },
+            {
+              "name": "O2",
+              "elements": [
+                {
+                  "left": {
+                    "elementName": "O",
+                    "isInterstitial": false,
+                    "molarMass": 15.999,
+                    "stableElementReference": "1/2_MOLE_O2(GAS)",
+                    "enthalpy": 4341.0,
+                    "entropyDiff0To298K": 102.52,
+                    "isValid": true
+                  },
+                  "right": 2.0
+                }
+              ],
+              "charge": 0,
+              "isInterstitial": false,
+              "isValid": true
+            },
+            {
+              "name": "O",
+              "elements": [
+                {
+                  "left": {
+                    "elementName": "O",
+                    "isInterstitial": false,
+                    "molarMass": 15.999,
+                    "stableElementReference": "1/2_MOLE_O2(GAS)",
+                    "enthalpy": 4341.0,
+                    "entropyDiff0To298K": 102.52,
+                    "isValid": true
+                  },
+                  "right": 1.0
+                }
+              ],
+              "charge": 0,
+              "isInterstitial": false,
+              "isValid": true
+            },
+            {
+              "name": "FE2",
+              "elements": [
+                {
+                  "left": {
+                    "elementName": "FE",
+                    "isInterstitial": false,
+                    "molarMass": 55.847,
+                    "stableElementReference": "BCC_A2",
+                    "enthalpy": 4489.0,
+                    "entropyDiff0To298K": 27.28,
+                    "isValid": true
+                  },
+                  "right": 2.0
+                }
+              ],
+              "charge": 0,
+              "isInterstitial": false,
+              "isValid": true
+            },
+            {
+              "name": "FE1O2",
+              "elements": [
+                {
+                  "left": {
+                    "elementName": "FE",
+                    "isInterstitial": false,
+                    "molarMass": 55.847,
+                    "stableElementReference": "BCC_A2",
+                    "enthalpy": 4489.0,
+                    "entropyDiff0To298K": 27.28,
+                    "isValid": true
+                  },
+                  "right": 1.0
+                },
+                {
+                  "left": {
+                    "elementName": "O",
+                    "isInterstitial": false,
+                    "molarMass": 15.999,
+                    "stableElementReference": "1/2_MOLE_O2(GAS)",
+                    "enthalpy": 4341.0,
+                    "entropyDiff0To298K": 102.52,
+                    "isValid": true
+                  },
+                  "right": 2.0
+                }
+              ],
+              "charge": 0,
+              "isInterstitial": false,
+              "isValid": true
+            },
+            {
+              "name": "FE1O1",
+              "elements": [
+                {
+                  "left": {
+                    "elementName": "FE",
+                    "isInterstitial": false,
+                    "molarMass": 55.847,
+                    "stableElementReference": "BCC_A2",
+                    "enthalpy": 4489.0,
+                    "entropyDiff0To298K": 27.28,
+                    "isValid": true
+                  },
+                  "right": 1.0
+                },
+                {
+                  "left": {
+                    "elementName": "O",
+                    "isInterstitial": false,
+                    "molarMass": 15.999,
+                    "stableElementReference": "1/2_MOLE_O2(GAS)",
+                    "enthalpy": 4341.0,
+                    "entropyDiff0To298K": 102.52,
+                    "isValid": true
+                  },
+                  "right": 1.0
+                }
+              ],
+              "charge": 0,
+              "isInterstitial": false,
+              "isValid": true
+            },
+            {
+              "name": "FE",
+              "elements": [
+                {
+                  "left": {
+                    "elementName": "FE",
+                    "isInterstitial": false,
+                    "molarMass": 55.847,
+                    "stableElementReference": "BCC_A2",
+                    "enthalpy": 4489.0,
+                    "entropyDiff0To298K": 27.28,
+                    "isValid": true
+                  },
+                  "right": 1.0
+                }
+              ],
+              "charge": 0,
+              "isInterstitial": false,
+              "isValid": true
+            }
+          ],
+          "nrOfSites": 1.0
+        }
+      ],
+      "hasMolarVolumeData": false,
+      "hasDiffusionData": false,
+      "diluteDiffusionModel": {
+        "type": "se.thermocalc.externalapi.database.NoDiffusion"
+      }
+    }
+  }
+]
