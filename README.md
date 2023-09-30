@@ -8,6 +8,8 @@ just implemented to map the full equilibrium regimes as a function of temperatur
 - plotting as T(K) and ln(Oxygen activity): referenced to the Oxygen gas at each temperature
 - (we can update the choice of databse later)
 
-see `Oxide_TC_equilibrium.py`
+see `Oxide_TC_equilibrium.ipynb`
 
-![Oxide_TC_equilibrium](Oxide_TC_equilibrium.png)
+![Oxide_TC_FullEquil](Oxide_TC_FullEquil.png)
+
+![Oxide_TC_Gm_phases](Oxide_TC_Gm_phases.png)
