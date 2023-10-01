@@ -1,4 +1,4 @@
-# Oxide_TC
+# IronOxide_TC
 
 just implemented to map the full equilibrium regimes as a function of temperature and O activity
 
@@ -8,7 +8,7 @@ just implemented to map the full equilibrium regimes as a function of temperatur
 
 ## Notebook
 
-- see `Oxide_TC_calculation.ipynb` for full calculation and visualisations.
+- see `IronOxide_TC_calculations.ipynb` for full calculations and visualisations.
 
 ## Dependencies
 
@@ -20,20 +20,20 @@ just implemented to map the full equilibrium regimes as a function of temperatur
 
 #### Full Equilibrium phase diagram as a function of temperature and O activity
 
-<img src="Oxide_TC_FullEquil.png" width="300"/>
+<img src="IronOxide_TC_FullEquil.png" width="300"/>
   
 #### Gibbs energy of phases as a function of temperature and O activity
 
-![Oxide_TC_Gm_phases](Oxide_TC_Gm_phases.png)
+![IronOxide_TC_Gm_phases](IronOxide_TC_Gm_phases.png)
 
 <!-- #### minimum Gibbs energy diagram
 
-<img src="Oxide_TC_Gmin.png" width="300"/> -->
+<img src="IronOxide_TC_Gmin.png" width="300"/> -->
 
 #### Driving force of phases (against gas) as a function of temperature and O activity
 
-![Oxide_TC_dgm_phases](Oxide_TC_dgm_phases.png)
+![IronOxide_TC_DGM_phases](IronOxide_TC_DGM_phases.png)
 
 #### Maximum Driving force diagram
 
-<img src="Oxide_TC_DGMmax.png" width="300"/>
+<img src="IronOxide_TC_DGMmax.png" width="300"/>
