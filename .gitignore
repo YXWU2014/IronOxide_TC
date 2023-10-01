@@ -1,23 +1,2 @@
 *.ipynb_cache/
 *.xlsx
-
-# # Ignore specific files
-# Oxide_TC_DGMmax.png
-# Oxide_TC_DGMmin.png
-# Oxide_TC_dgm_phases.png
-# Oxide_TC.code-workspace
-# Oxide_TC_DGM.png
-# Oxide_TC_FullEquil.png
-# Oxide_TC_Gmin.png
-# Oxide_TC_Gm_phases.png
-# README.md
-# tc_df_DGM_check.xlsx
-# tc_df_FullEquil_check_filter.xlsx
-# tc_df_FullEquil_check.xlsx
-# tc_df_Gmin_check.xlsx
-# tc_IronOxide_FuilEquil.TCM
-# tc_IronOxide_Gmin.TCM
-# tc-python-examples/
-# IronOxide_TC_calculations.ipynb
-# IronOxide_TC_calculations.ipynb_cache/
-# archive/
