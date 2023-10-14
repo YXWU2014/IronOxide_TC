@@ -2,13 +2,13 @@ go da
 sw tcfe11
 d-sys Fe O
 rej ph *
-rest ph bcc_a2 
+rest ph bcc_a2 liquid
 get
 
-APPEND SSUB5
+APPEND tcox10
 DEF-SYS O Fe
 rej ph *
-rest ph HEMATITE MAGNETITE WUSTITE GAS
+rest ph corundum spinel halite GAS
 GET
 
 
@@ -20,7 +20,7 @@ ADV-OPT GLOBAL N N !
 @@ ADV-OPT EQ_CALC N Y !
 @@ SET-NUM-LIM 20000 1E-6 1E-20 Y
 
-s-c t=373.15 p=0.5 n=1
+s-c t=573.15 p=0.5 n=1
 l-c
 
 s-c lnacr(o)=-400
@@ -46,14 +46,22 @@ NORMAL
 @@ -----------------------------------------------------------------
 post
 
-s-d-a x acr(o2,gas)
+s-d-a x lnacr(o)
 s-d-a y np(*)
 *
-s-a-ty x log
 set-label D
+s-s-s x n -60 -5
 pl
-s-s x n 1e-100 1e-25
-pl
+ 
+
+@@ s-d-a x acr(o2,gas)
+@@ s-d-a y np(*)
+@@ *
+@@ s-a-ty x log
+@@ set-label D
+@@ pl
+@@ s-s-s x n 1e-100 1e-25
+@@ pl
 
 @@ s-d-a x acr(o)
 @@ s-d-a y bpw(*)

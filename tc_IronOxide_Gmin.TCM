@@ -2,15 +2,15 @@ go da
 sw tcfe11
 d-sys Fe O
 rej ph *
-@@ rest ph bcc_a2 liquid
-rest ph bcc_a2
+rest ph bcc_a2 liquid
+@@ rest ph bcc_a2
 get
 
 APPEND SSUB5
 DEF-SYS O Fe
 rej ph *
-@@ rest ph HEMATITE MAGNETITE WUSTITE GAS
-rest ph GAS
+rest ph HEMATITE MAGNETITE WUSTITE GAS
+@@ rest ph GAS
 GET
 
 
@@ -22,10 +22,10 @@ ADV-OPT GLOBAL N N !
 @@ ADV-OPT EQ_CALC N Y !
 @@ SET-NUM-LIM 20000 1E-6 1E-20 Y
 
-s-c t=473.15 p=0.5 n=1
+s-c t=273.15 p=0.5 n=1
 l-c
 
-s-c lnacr(o)=-20
+s-c lnacr(o)=-60
 s-r-s o gas * 1e5
 c-e
 l-e
@@ -35,15 +35,25 @@ show lnacr(o)
 
 CH-ST
 PHASE
+*
+SUS
+
+CH-ST
+PHASE
 GAS
 DORMANT
+CH-ST
+PHASE
+liquid
+ENTERED
+1
 
 c-e
 l-e
 
 VWCS
 
-
+show gm(liquid)
 
 @@ ----- check the activity dependence of the Gm -----
 CH-ST

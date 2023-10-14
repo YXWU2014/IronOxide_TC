@@ -1,0 +1,82 @@
+go da
+sw tcfe11
+d-sys Fe O
+rej ph *
+rest ph bcc_a2 
+get
+
+APPEND SSUB5
+DEF-SYS O Fe
+rej ph *
+rest ph HEMATITE MAGNETITE WUSTITE GAS
+GET
+
+
+@@ -----------------------------------------------------------------
+go p-3
+
+@@ @@ TURN OFF GLOBAL COMPLETELY FOR AQUEOUS CALCULATIONS
+ADV-OPT GLOBAL N N !
+@@ ADV-OPT EQ_CALC N Y !
+@@ SET-NUM-LIM 20000 1E-6 1E-20 Y
+
+s-c t=573.15 p=0.5 n=1
+l-c
+
+s-c lnacr(o)=-400
+s-r-s o gas * 1e5
+c-e
+l-e
+
+VWCS
+sh lnacr(o)
+
+@@ List also the activity of O2
+show lnacr(o2,gas)
+
+@@ -----------------------------------------------------------------
+s-a-v 1 lnacr(o)
+-400
+-10
+0.25
+save tc_oxide y
+step
+NORMAL
+
+@@ -----------------------------------------------------------------
+post
+
+s-d-a x lnacr(o)
+s-d-a y np(*)
+*
+set-label D
+s-s-s x n -60 -5
+pl
+ 
+
+@@ s-d-a x acr(o2,gas)
+@@ s-d-a y np(*)
+@@ *
+@@ s-a-ty x log
+@@ set-label D
+@@ pl
+@@ s-s-s x n 1e-100 1e-25
+@@ pl
+
+@@ s-d-a x acr(o)
+@@ s-d-a y bpw(*)
+@@ *
+@@ s-a-ty x log
+@@ set-label D
+@@ pl
+@@ s-s x n 1e-210 1e-110
+@@ pl
+ 
+@@ s-d-a y x(fcc_l12,*)
+@@ *
+@@ s-a-ty y log
+@@ s-s y n 1e-6 1
+@@ pl
+@@ 
+ 
+
