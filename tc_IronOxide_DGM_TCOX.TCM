@@ -1,0 +1,183 @@
+go da
+sw tcfe13
+d-sys Fe O
+rej ph *
+@@ rest ph bcc_a2 liquid  
+rest ph liquid  
+get
+
+APPEND tcox10
+DEF-SYS O Fe
+rej ph *
+@@ rest ph corundum spinel halite
+rest ph GAS
+GET
+
+
+APPEND ssub5
+DEF-SYS O Fe
+rej ph *
+rest ph GAS
+GET
+
+
+
+
+@@ -----------------------------------------------------------------
+go p-3
+
+@@ ADV-OPT GLOBAL N N !
+ 
+CH-ST
+PHASE
+liquid
+DORMANT
+ 
+s-c t=273.15 p=0.5 n=1
+l-c
+
+s-c lnacr(o)=-60
+s-r-s o gas * 1e5
+c-e
+l-e
+
+VWCS
+show lnacr(o)
+show dgm(liquid)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CH-ST
+PHASE
+*
+SUS
+
+
+CH-ST
+PHASE
+liquid
+ENTERED
+1
+
+c-e
+l-e
+
+VWCS
+
+show dgm(liquid)
+
+@@ ----- check the activity dependence of the Gm -----
+CH-ST
+PHASE
+*
+SUS
+
+CH-ST
+PHASE
+WUSTITE
+ENTERED
+1
+
+s-c lnacr(o)=-300
+c-e
+show gm(WUSTITE)
+
+s-c lnacr(o)=-400
+c-e
+show gm(WUSTITE)
+
+s-c lnacr(o)=-500
+c-e
+show gm(WUSTITE)
+
+
+@@ ----- check across the phases -----
+CH-ST
+PHASE
+*
+SUS
+
+CH-ST
+PHASE
+WUSTITE
+ENTERED
+1
+CH-ST
+PHASE
+GAS
+DORMANT
+
+c-e
+show gm(WUSTITE)
+
+CH-ST
+PHASE
+*
+SUS
+
+CH-ST
+PHASE
+MAGNETITE
+ENTERED
+1
+CH-ST
+PHASE
+GAS
+DORMANT
+
+c-e
+show gm(MAGNETITE)
+
+CH-ST
+PHASE
+*
+SUS
+
+CH-ST
+PHASE
+HEMATITE
+ENTERED
+1
+CH-ST
+PHASE
+GAS
+DORMANT
+
+c-e
+show gm(HEMATITE)
+
+CH-ST
+PHASE
+*
+SUS
+
+CH-ST
+PHASE
+BCC_A2
+ENTERED
+1
+CH-ST
+PHASE
+GAS
+DORMANT
+
+c-e
+show gm(BCC_A2)
+
+ 
+ 
