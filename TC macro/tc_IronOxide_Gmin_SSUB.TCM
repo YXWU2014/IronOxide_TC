@@ -1,5 +1,5 @@
 go da
-sw tcfe11
+sw tcfe13
 d-sys Fe O
 rej ph *
 rest ph bcc_a2 liquid
@@ -17,7 +17,6 @@ GET
 @@ -----------------------------------------------------------------
 go p-3
 
-@@ @@ TURN OFF GLOBAL COMPLETELY FOR AQUEOUS CALCULATIONS
 ADV-OPT GLOBAL N N !
 @@ ADV-OPT EQ_CALC N Y !
 @@ SET-NUM-LIM 20000 1E-6 1E-20 Y

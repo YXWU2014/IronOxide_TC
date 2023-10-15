@@ -2,20 +2,19 @@ go da
 sw tcfe11
 d-sys Fe O
 rej ph *
-rest ph bcc_a2 liquid
+rest ph bcc_a2 
 get
 
-APPEND tcox10
+APPEND SSUB5
 DEF-SYS O Fe
 rej ph *
-rest ph corundum spinel halite GAS
+rest ph HEMATITE MAGNETITE WUSTITE GAS
 GET
 
 
 @@ -----------------------------------------------------------------
 go p-3
 
-@@ @@ TURN OFF GLOBAL COMPLETELY FOR AQUEOUS CALCULATIONS
 ADV-OPT GLOBAL N N !
 @@ ADV-OPT EQ_CALC N Y !
 @@ SET-NUM-LIM 20000 1E-6 1E-20 Y

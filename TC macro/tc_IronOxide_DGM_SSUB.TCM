@@ -3,14 +3,14 @@ sw tcfe11
 d-sys Fe O
 rej ph *
 @@ rest ph bcc_a2 liquid
-rest ph liquid
+rest ph bcc_a2
 get
 
 APPEND ssub5
 DEF-SYS O Fe
 rej ph *
 @@ rest ph HEMATITE MAGNETITE WUSTITE GAS
-rest ph GAS
+rest ph MAGNETITE GAS
 GET
 
 
@@ -18,26 +18,24 @@ GET
 go p-3
 
 ADV-OPT GLOBAL N N !
-
-
-
+ 
 CH-ST
 PHASE
-liquid
+MAGNETITE bcc_a2
 DORMANT
 
 
 
 
-s-c t=273.15 p=0.5 n=1
+s-c t=573.15 p=0.5 n=1
 l-c
 
-s-c lnacr(o)=-60
+s-c lnacr(o)=-7.9663978
 s-r-s o gas * 1e5
 c-e
 l-e
 
 VWCS
 show lnacr(o)
-show dgm(liquid)
+show dgm(MAGNETITE)
 
