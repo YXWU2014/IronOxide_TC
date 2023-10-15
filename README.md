@@ -1,6 +1,6 @@
 # IronOxide_TC
 
-## Updates 2023-10-1
+<!-- ## Updates 2023-10-15
 
 Now in Jupyter Notebook.
 
@@ -9,7 +9,7 @@ I have tried to implement the three types of Gibbs energy assessments: Full Equi
 Still need to have another check to ensure the calculations are 100% consistent with Console mode and to determine if we need to try other databases.
 
 - Pressure = 0.5 Pa (5e-6 bar) and only Fe and O
-- Plotting as T(K) and ln(Oxygen activity): referenced to the oxygen gas phase at each temperature
+- Plotting as T(K) and ln(Oxygen activity): referenced to the oxygen gas phase at each temperature -->
 
 ## Introduction
 
@@ -26,14 +26,16 @@ Still need to have another check to ensure the calculations are 100% consistent 
 - Pressure = 0.5 Pa (5e-6 bar) and only Fe and O
 - Plotting as T(K) and ln(Oxygen activity): referenced to the oxygen gas phase at each temperature
 
+<img src="Fig_4_Summary.png"/>
+
 ## Notebook
 
-- See `IronOxide_TC_calculations.ipynb` for full calculations and visualisations.
+- See `IronOxide_TC_sublattice.ipynb` for full calculations and visualisations. This notebook is based on the CEF
 
 ## Dependencies
 
 - **tc-python by Thermo-Calc**
-- **TCFE**: Using the TCFE11 database for the BCC and Liquid phases.
+- **TCFE**: Using the TCFE13 database for the Corundum, Spinel, HalieBCC phases.
 - **SSUB**: Using the SSUB5 database for the HEMATITE, MAGNETITE, and WUSTITE phases.
 
 ## Visuals
