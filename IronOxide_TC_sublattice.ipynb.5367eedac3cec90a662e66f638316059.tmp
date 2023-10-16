@@ -1,8 +1,0 @@
-plt.figure(figsize=(5, 5))
-plt.scatter(df_FullEquil['lnacr_o'], df_FullEquil['T']-273.15,
-            c=df_FullEquil['np(CORUNDUM)'], s=6,  alpha=1)
-plt.xlabel(df_FullEquil.columns[0])
-plt.ylabel(df_FullEquil.columns[1])
-plt.grid(True)
-plt.title('check and plotting the Hematite')
-plt.show()

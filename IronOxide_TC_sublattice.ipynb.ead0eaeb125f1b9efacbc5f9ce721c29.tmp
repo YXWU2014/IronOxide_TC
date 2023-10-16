@@ -1,9 +1,0 @@
-basename = 'IronOxide_TC_sublattice'
-
-current_directory = os.getcwd()
-cache_fname = basename + '.ipynb' + "_cache"
-output_fname = os.path.splitext(basename)[0]
-
-print("Cache Filename: ", cache_fname)
-print("Output Filename: ", output_fname)
-print("Current Dir: ", current_directory)
