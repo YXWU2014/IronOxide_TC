@@ -13,11 +13,11 @@ Still need to have another check to ensure the calculations are 100% consistent 
 
 ## Introduction
 
-We conducted computational thermodynamic analyses using the CALPHAD (Calculation of Phase Diagrams) approach to study the phase equilibria involving iron, various iron oxide polymorphs, and gases during PVD (Physical Vapor Deposition) synthesis. Our study comprises two types of Gibbs energy evaluations. The first type involves a full equilibrium assessment, mapping out stable phases as functions of both temperature and oxygen activity. The second type focuses on the nucleation driving force, which represents the energetic shift in the system when a infinitesimal amount of solid phase (either iron or an iron oxide) depositing from a supersaturated gas phase. This was also examined as a function of temperature and oxygen activity.
+We conducted computational thermodynamic analyses using the CALPHAD (Calculation of Phase Diagrams) approach to study the phase equilibria involving iron, various iron oxide polymorphs, and gases during PVD (Physical Vapor Deposition) synthesis. Our study comprises two types of Gibbs energy evaluations. The first type involves the full equilibrium calculations, mapping out stable phases as functions of both temperature and oxygen activity. The second type focuses on the nucleation driving force, which represents the energetic shift in the system when an infinitesimal amount of solid phase (either iron or an iron oxide) is deposited from a supersaturated gas phase. This was also examined as a function of temperature and oxygen activity.
 
-We referenced the oxygen activity to that in the gas phase at each specified temperature, under standard atmospheric conditions. It is assume that the PVD experiments were at a constant level of oxygen activity, with the atmospheric conditions being a mixture of argon and oxygen. We labelled the plots with oxygen activities corresponding to the experimental condition, which corresponds to a volumetric flow rate ratio of 40/2 for argon and oxygen at a pressure of 0.5 Pa (5e-6 bar).
+We referenced the oxygen activity to that in the gas phase at each specified temperature, under standard atmospheric conditions. It is assumed that the PVD experiments were at a constant level of oxygen activity, with the atmospheric conditions being a mixture of argon and oxygen. We labelled the plots with oxygen activities corresponding to the experimental condition, which corresponds to a volumetric flow rate ratio of 40/2 for argon and oxygen at a pressure of 0.5 Pa (5e-6 bar).
 
-We have used the Gibbs energy assessments of the solution phase of iron, hematite (corundum phase), magnetite (spinel phase), and wüstite (halite phase), BCC iron, and the gas phase, as in the TCFE13 database of Thermo-Calc. Parallelised calculations were performed via the tc-python API by Thermo-Calc. Additional details can be found in our GitHub repository: (https://github.com/YXWU2014/IronOxide_TC).
+We have used the Gibbs energy assessments of the solution phase of iron, hematite (corundum phase), magnetite (spinel phase), and wüstite (halite phase), BCC iron, and the gas phase, from the TCFE13 database of Thermo-Calc. Parallelised calculations were performed via the tc-python API by Thermo-Calc. Additional details can be found in our GitHub repository: (https://github.com/YXWU2014/IronOxide_TC).
 
 <img src="Fig_4_Summary.png"/>
 
@@ -57,15 +57,15 @@ By fully understanding both the stoichiometric and non-stoichiometric oxides' th
 
 ## Visuals
 
-#### Full Equilibrium phase diagram as a function of temperature and O activity
+### Full Equilibrium phase diagram as a function of temperature and O activity
 
 <img src="IronOxide_TC_sublattice_FullEquil.png" width="300"/>
   
-#### Gibbs energy of phases as a function of temperature and O activity
+### Gibbs energy of phases as a function of temperature and O activity
 
 <img src="IronOxide_TC_sublattice_Gm_phases.png"/>
 
-#### Nucleation Driving force of depositing phases (from gas phase) as a function of temperature and O activity
+### Nucleation Driving force of depositing phases (from gas phase) as a function of temperature and O activity
 
 using solution phase of oxides from TCFE13
 <img src="IronOxide_TC_sublattice_DGM_phases_full.png"/>
@@ -73,16 +73,27 @@ using solution phase of oxides from TCFE13
 using stoichiometric phase of oxides from SSUB5 (overall landscape looks very similar as above solution phases)
 <img src="IronOxide_TC_stoichiometric_DGM_phases_full.png"/>
 
-#### Driving Force diagram: zoom in
+### Driving Force diagram: zoom in
 
-High oxygen activity condition: small dot shows the physical vapour deposition condition (`./TC_macro/tc_O_activity.TCM`).
+High oxygen activity condition (**solution phase**): small dot shows the physical vapour deposition condition (`./TC_macro/tc_O_activity.TCM`).
 
 <img src="IronOxide_TC_sublattice_DGM_phases_highO.png"/>
+
+High oxygen activity condition (**stoichiometric phase**)
+<img src="IronOxide_TC_stoichiometric_DGM_phases_highO.png"/>
 
 Low oxygen activity condition:
 
 <img src="IronOxide_TC_sublattice_DGM_phases_lowO.png"/>
 
-#### Maximum nucleation driving force diagram.
+### Maximum nucleation driving force diagram.
 
 **using solution phase of oxides from TCFE13**
+
+<img src="IronOxide_TC_sublattice_DGMmax.png" width="300"/>
+<img src="IronOxide_TC_sublattice_DGMmax_MagnetiteVSWustite.png" width="300"/>
+
+**using stoichiometric phase of oxides from SSUB5**
+
+<img src="IronOxide_TC_stoichiometric_DGMmax.png" width="300"/>
+<img src="IronOxide_TC_stoichiometric_DGMmax_MagnetiteVSWustite.png" width="300"/>
