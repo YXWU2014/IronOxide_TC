@@ -88,12 +88,18 @@ Low oxygen activity condition:
 
 ### Maximum nucleation driving force diagram.
 
-**using solution phase of oxides from TCFE13**
+**using solution phase of oxides from TCFE13 (all phases)**
 
 <img src="IronOxide_TC_sublattice_DGMmax.png" width="300"/>
+
+**using solution phase of oxides from TCFE13 (comparing Magnetite vs. Wustite)**
+
 <img src="IronOxide_TC_sublattice_DGMmax_MagnetiteVSWustite.png" width="300"/>
 
-**using stoichiometric phase of oxides from SSUB5**
+**using stoichiometric phase of oxides from SSUB5 (all phases)**
 
 <img src="IronOxide_TC_stoichiometric_DGMmax.png" width="300"/>
+
+**using stoichiometric phase of oxides from SSUB5 (comparing Magnetite vs. Wustite)**
+
 <img src="IronOxide_TC_stoichiometric_DGMmax_MagnetiteVSWustite.png" width="300"/>
