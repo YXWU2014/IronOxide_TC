@@ -12,10 +12,20 @@ get
 go p-3
 
 l-st c
+
+@@ condition 1: forming Magnetite
 @@ b(ar) = v(ar)*39.95Vm = 40*39.95 = 1598
 @@ b(o2) = v(o2)*16 = 2*16 = 32
+@@ T = 300+273.15 = 573.15
+@@ p = 0.5
 
-s-i-a b(ar)=1598 b(o2)=100
+@@ condition 2: forming Hematite
+@@ b(ar) = v(ar)*39.95Vm = 40*39.95 = 1598
+@@ b(o2) = v(o2)*16 = 10*16 = 160
+@@ T = 25+273.15 = 298.15
+@@ p = 0.5
+
+s-i-a b(ar)=1598 b(o2)=160
 s-c t=298.15 p=0.5
 l-c
 
@@ -27,4 +37,9 @@ show acr(o)
 show lnacr(o)
 
 @@ ------
+@@ condition 1: forming Magnetite
 @@ LNACR(O)=-7.9663978
+
+@@ condition 2: forming Hematite
+@@ LNACR(O)=-7.2082246
+
