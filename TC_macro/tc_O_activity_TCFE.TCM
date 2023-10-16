@@ -1,0 +1,30 @@
+@@ find the C activity in gas based on Ar/O2 ratio
+
+go data
+sw TCFE13
+dat-inf
+def-sys Ar O 
+rej ph *
+rest ph gas 
+li-sy sp
+get 
+
+go p-3
+
+l-st c
+@@ b(ar) = v(ar)*39.95Vm = 40*39.95 = 1598
+@@ b(o2) = v(o2)*16 = 2*16 = 32
+
+s-i-a b(ar)=1598 b(o2)=100
+s-c t=298.15 p=0.5
+l-c
+
+s-ref-s o gas * 101325
+
+c-e
+
+show acr(o)
+show lnacr(o)
+
+@@ ------
+@@ LNACR(O)=-7.9663978
