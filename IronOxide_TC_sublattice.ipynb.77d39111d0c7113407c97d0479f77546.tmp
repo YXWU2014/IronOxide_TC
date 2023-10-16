@@ -1,0 +1,23 @@
+# from utils import plot_phases_crop
+
+# phases_list_sel = ['SPINEL', 'HALITE', 'BCC_A2']
+# labels_list_sel = ['Magnetite', 'Wustite', 'BCC Iron']
+# func = 'dgm'
+# colormaps = {
+#     'CORUNDUM': ('RdBu_r',  5, 50),
+#     'SPINEL':   ('RdBu_r',  5, 50),
+#     'HALITE':   ('RdBu_r',  5, 50),
+#     'BCC_A2':   ('RdBu_r',  5, 50),
+# }
+
+# use_defined_range = True
+# cbar_label = 'Driving force normalised by RT'
+# title = 'Driving force map (Low O activtiy)'
+# xlim, ylim, alpha = (-60, -55, 1), (250, 350, 10), 1
+# s_base, s_highlight = 40, 75
+# save_plot = True
+# plt_output_fname = "_DGM_phases_lowO_sel.png"
+# plot_phases_crop(phases_list_sel, df_DGM, func, labels_list_sel,
+#                  colormaps, use_defined_range, cbar_label, title,
+#                  xlim, ylim, alpha, s_base, s_highlight,
+#                  save_plot, current_directory, output_fname, plt_output_fname)

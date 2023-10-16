@@ -1,0 +1,14 @@
+import pickle
+from tc_python import *
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+from multiprocessing import Pool
+import os
+from itertools import product
+import time
+import matplotlib
+matplotlib.rcParams['font.family'] = 'FreeSans'
+
+num_cpus = os.cpu_count()
+print(f'cpu_count: {num_cpus}')

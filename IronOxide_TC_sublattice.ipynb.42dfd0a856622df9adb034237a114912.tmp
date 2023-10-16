@@ -1,0 +1,38 @@
+# columns_to_compare = [f'dgm({phase})' for phase in phases_list]
+columns_to_compare = ['dgm(SPINEL)', 'dgm(HALITE)']
+
+for phase in phases_list:
+    column_name = f'dgm({phase})'
+    condition = df_DGM[column_name] == df_DGM[columns_to_compare].max(axis=1)
+    globals()[f'df_DGM_{phase}'] = df_DGM[condition]
+
+# Plotting the individual dataframes
+plt.figure(figsize=(5, 5))
+
+for i, phase in enumerate(phases_list):
+    if phase == 'CORUNDUM' or phase == 'BCC_A2':
+        pass
+    else:
+        df = globals()[f'df_DGM_{phase}']
+        plt.scatter(df['lnacr_o'], df['T']-273.15, s=50, label=labels_list[i],
+                    color=colors[phase], alpha=1)
+plt.scatter([-7.9663978], [300],
+            facecolors='white', edgecolors='black', linewidths=1, s=75)
+plt.scatter([-7.2082246], [25],
+            facecolors='white', edgecolors='black', linewidths=1, s=75)
+
+
+plt.xlabel('Natural log of oxygen activity', fontsize=14)
+plt.ylabel(r'T ($^\circ$C)', fontsize=14)
+plt.title('Maximum chemical driving force for nucleation', fontsize=14)
+plt.legend(fontsize=12, loc='upper left',
+           facecolor='white', edgecolor='black', framealpha=0.9)
+plt.grid(True, which='both', linestyle='--', linewidth=0.4)
+plt.xlim([-60, -5])
+plt.ylim([min(df_DGM['T'])-273.15, max(df_DGM['T'])-273.15])
+plt.tight_layout()
+
+# plt_output_fname = "_DGMmax_MagnetiteVSWustite.png"
+# plt.savefig(os.path.join(current_directory, output_fname+plt_output_fname),
+#             format='png', dpi=300,  bbox_inches='tight')
+plt.show()

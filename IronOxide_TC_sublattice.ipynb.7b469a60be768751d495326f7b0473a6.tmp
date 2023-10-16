@@ -1,0 +1,28 @@
+from copy import deepcopy
+
+
+def process_data(Gmin_DGM_args, Gmin_DGM_results):
+
+    Gmin_gm_values = {}
+    Gmin_phase_conditions = {}
+
+    for args, result in zip(Gmin_DGM_args, Gmin_DGM_results):
+        tk, db, phase = deepcopy(args)
+        conditions, gm_values = deepcopy(result)
+
+        lnacr_o_values = [dict(cond)['lnacr(o)'] for cond in conditions]
+        T_values = [dict(cond)['T'] for cond in conditions]
+
+        if phase in Gmin_gm_values:
+            Gmin_gm_values[phase].extend(gm_values)
+        else:
+            Gmin_gm_values[phase] = gm_values
+
+        if phase in Gmin_phase_conditions:
+            Gmin_phase_conditions[phase]['lnacr(o)'].extend(lnacr_o_values)
+            Gmin_phase_conditions[phase]['T'].extend(T_values)
+        else:
+            Gmin_phase_conditions[phase] = {
+                'lnacr(o)': lnacr_o_values, 'T': T_values}
+
+    return Gmin_gm_values, Gmin_phase_conditions

@@ -1,0 +1,10 @@
+df_Gmin = pd.DataFrame({
+    'lnacr_o':  Gmin_conditions['lnacr(o)'],
+    'T': Gmin_conditions['T'],
+    **{f'gm({phase})': Gmin_gm_values.get(phase, []) for phase in phases_list}
+})
+
+df_Gmin.to_excel(os.path.join(current_directory,
+                 "tc_df_Gmin_check.xlsx"), index=False)
+
+display(df_Gmin.head(3), df_Gmin.shape)

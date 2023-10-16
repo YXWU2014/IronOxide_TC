@@ -1,0 +1,19 @@
+phases_list = [phase for db_phases in databases_phases.values()
+               for phase in db_phases]
+print(phases_list)
+
+print("Length of Gmin_DGM_args:", len(Gmin_DGM_args))
+print("Length of Gmin_results:", len(Gmin_results))
+
+Gmin_gm_values, Gmin_phase_conditions = process_data(
+    Gmin_DGM_args, Gmin_results)
+
+print("temperature_grid x acc_grid:", 130*250)
+print("length of Gmin_gm_values: ", len(Gmin_gm_values['BCC_A2']))
+
+for i, phase in enumerate(phases_list):
+    assert Gmin_phase_conditions[phases_list[0]
+                                 ] == Gmin_phase_conditions[phase]
+
+Gmin_conditions = Gmin_phase_conditions[phases_list[0]]
+print("length of Gmin_conditions: ", len(Gmin_conditions['lnacr(o)']))
