@@ -82,3 +82,7 @@ High oxygen activity condition: small dot shows the physical vapour deposition c
 Low oxygen activity condition:
 
 <img src="IronOxide_TC_sublattice_DGM_phases_lowO.png"/>
+
+#### Maximum nucleation driving force diagram.
+
+**using solution phase of oxides from TCFE13**
