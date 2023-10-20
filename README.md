@@ -17,7 +17,7 @@ We labelled the plots with oxygen activities corresponding to the experimental c
 - **Experimental magnetite-forming condition**: Corresponds to a volumetric flow rate ratio of 40/2 for argon and oxygen at 300°C.
 - **Experimental hematite-forming condition**: Corresponds to a volumetric flow rate ratio of 40/10 for argon and oxygen at 25°C.
 
-All PVD experiments were conducted at a pressure of 0.5 Pa (5 x 10^-6 bar).
+All PVD experiments were conducted at a pressure of 0.5 Pa (5 x 10^-3 mbar).
 
 **Databases and Calculations**
 

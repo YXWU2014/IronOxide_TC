@@ -1,0 +1,51 @@
+go da
+sw tcfe11
+d-sys Fe O
+rej ph *
+rest ph bcc_a2 liquid
+get
+
+APPEND SSUB5
+DEF-SYS O Fe
+rej ph *
+rest ph HEMATITE MAGNETITE WUSTITE GAS
+GET
+
+
+@@ -----------------------------------------------------------------
+go p-3
+
+@@ ADV-OPT GLOBAL N N !
+
+s-c t=573.15 p=0.5 n=1
+l-c
+
+s-c lnacr(o2,gas)=-50
+s-r-s o gas * 1e5
+c-e
+l-e
+
+VWCS
+sh lnacr(o)
+
+@@ List also the activity of O2
+show lnacr(o2,gas)
+
+@@ -----------------------------------------------------------------
+s-a-v 1 lnacr(o2,gas)
+-50
+-10
+
+s-a-v 2 t
+400
+2000
+
+map 
+
+@@ -----------------------------------------------------------------
+post 
+pl
+
+
+ 
+
