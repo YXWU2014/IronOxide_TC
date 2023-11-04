@@ -25,7 +25,7 @@ We used the Gibbs energy assessments of BCC iron from the TCFE13 database, as we
 
 ## Notebook and macro
 
-- See `IronOxide_TC_stoichiometric.ipynb` for full calculations and visualisations. It uses the free energy for oxides from the SSUB substance database. In this case, the oxides are treated as stoichiometric compounds.
+- See `IronOxide_TC_stoichiometric.ipynb` for complete calculations and visualisations. It uses the free energy for oxides from the SSUB substance database. In this case, the oxides are treated as stoichiometric compounds. We should know the uncertainties regarding using the Gibbs energy extrapolated to the low-temperature regime.
 
 - One may also check out `IronOxide_TC_sublattice.ipynb`. This notebook is based on Gibbs energy evaluations using sublattice models (oxides are treated as solution phase). Free energy is taken from the TCFE13 database.
 
