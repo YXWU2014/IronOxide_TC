@@ -84,7 +84,7 @@ def plot_phases(phases_list, df_Gmin, func, labels_list,
                     format='png', dpi=300, bbox_inches='tight')
     plt.show()
 
-# -----------------------------------------------------------------------------------
+# -------------------------------------------------------------------------
 
 
 def plot_phases_crop(phases_list, df_Gmin, func, labels_list,
