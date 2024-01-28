@@ -5,7 +5,7 @@
 We conducted computational thermodynamic analyses using the CALPHAD (Calculation of Phase Diagrams) approach to study the phase equilibria involving iron, various iron oxide polymorphs, and gases for the PVD (Physical Vapor Deposition) synthesis. Our study comprises two types of Gibbs energy evaluations:
 
 1. **Full Equilibrium Calculations**: These map out stable phases as functions of both temperature and oxygen activity.
-2. **Nucleation Driving Force**: This represents the energetic shift in the system when an infinitesimal amount of solid phase (either iron or an iron oxide) is deposited from a supersaturated gas phase. This was also examined as a function of temperature and oxygen activity.
+2. **Instantaneous Driving Force**: This represents the energetic shift in the system when an infinitesimal amount of solid phase (either iron or an iron oxide) is deposited from a supersaturated gas phase. This was also examined as a function of temperature and oxygen activity.
 
 We referenced the oxygen activity to that in the gas phase at each specified temperature, under standard atmospheric conditions. The PVD experiments are assumed to have been conducted at a constant level of oxygen activity, with the atmospheric conditions being a mixture of argon and oxygen.
 
@@ -27,8 +27,6 @@ We used the Gibbs energy assessments of BCC iron from the TCFE13 database, as we
 
 - See `IronOxide_TC_stoichiometric.ipynb` for complete calculations and visualisations. It uses the free energy for oxides from the SSUB substance database. In this case, the oxides are treated as stoichiometric compounds. We should know the uncertainties regarding using the Gibbs energy extrapolated to the low-temperature regime.
 
-- One may also check out `IronOxide_TC_sublattice.ipynb`. This notebook is based on Gibbs energy evaluations using sublattice models (oxides are treated as solution phase). Free energy is taken from the TCFE13 database.
-
 - Some Thermo-Calc macros for console mode are included in the `./TC macro` directory.
 
 ## Visuals
@@ -37,7 +35,7 @@ We used the Gibbs energy assessments of BCC iron from the TCFE13 database, as we
 
 <img src="IronOxide_TC_stoichiometric_FullEquil.png" width="300"/>
 
-### Nucleation Driving force of depositing phases (from gas phase) as a function of temperature and O activity
+### Instantaneous Driving force of depositing phases (from gas phase) as a function of temperature and O activity
 
 <img src="IronOxide_TC_stoichiometric_DGM_phases_full.png"/>
 
@@ -50,6 +48,6 @@ Low oxygen activity condition: small dot shows the physical vapour deposition co
 High oxygen activity condition:
 <img src="IronOxide_TC_stoichiometric_DGM_phases_highO.png"/>
 
-### Maximum nucleation driving force diagram.
+### Maximum instantaneous driving force diagram.
 
 <img src="IronOxide_TC_stoichiometric_DGMmax.png" width="300"/>
